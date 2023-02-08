@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -vamF .
+ls -vam --file-type .
