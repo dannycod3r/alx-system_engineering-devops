@@ -1,2 +1,2 @@
 #!/bin/bash
-cat /etc/ssh/sshd_config | grep -E '^\w'
+cat /etc/ssh/sshd_config | grep -e '^\w'
