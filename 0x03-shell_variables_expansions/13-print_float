@@ -1,2 +1,2 @@
 #!/bin/bash
-export MYVAR=$MYVAR.00
+print "%.2f\n" $NUM
