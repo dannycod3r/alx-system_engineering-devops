@@ -1,0 +1,38 @@
+Simple web stack
+
+Image Link: https://imgur.com/AOOjqZF
+
+- What is a server
+A server is a powerful and reliable computer
+that serves or provides services and resources
+to other computers or devices over a network.
+
+- What is the role of the domain name
+The domain name is a human-readable representation
+of where to get a resource on a network as opposed to IP Address.
+
+- What type of DNS record www is in www.foobar.com
+The DNS record www in www.foobar.com is a CNAME Record
+
+- What is the role of the web server
+The web server provides the user with static website content
+
+- What is the role of the application server
+The application server handles dynamic content and
+execute server-side code.
+
+- What is the role of the database
+A role database is efficiently and securely store, manage, and retrieve data.
+
+- What is the server using to communicate with the computer of the user requesting the website?
+The communication between the server and the computer is done via HTTP.
+
+- SPOF
+This infrastructure is a Single Point Of Failure because
+there is no backup server is case the active server is down or needs maintenance.
+
+- Downtime when maintenance needed (like deploying new code web server needs to be restarted)
+Because there is no backup server, no user can access the content on the server.
+
+- Cannot scale if too much incoming traffic
+This infrastructure can not scale if theres too much incoming traffic.
