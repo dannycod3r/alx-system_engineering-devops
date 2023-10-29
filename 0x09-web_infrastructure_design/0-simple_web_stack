@@ -1,0 +1,39 @@
+Simple web stack architechture - https://imgur.com/AOOjqZF
+
+- What is a server?
+
+A server is a computer that processes requests from a client and send results in the form of response.
+
+- What is the role of the domain name?
+
+The domain name is the human readable address to websites.
+
+- What type of DNS record www is in www.foobar.com?
+
+www.foobar.com is a type of Canonical Name(CNAME) record.
+ 
+- What is the role of the web server?
+
+A web server is responsible for serving markup or website files eg. HTML files
+
+- What is the role of the application server?
+
+Application server runs scripts or code on the server.
+
+- What is the role of the database?
+
+The database stores data in the form of records. A database helps to store, retrieve and manipulate data.
+
+- What is the server using to communicate with the computer of the user requesting the website?
+The communication between server and user's computer requesting website is Hypertext Transfer Protocol(HTTP)
+
+
+- Issues of Simple Web Stack Architechture
+
+This system does not have a reduntant server thus is when this server is down, 
+the website can not be accessed. The server is a Single Point Of Failure(SPOF).
+
+When there is any update on the code, the web server has to be restarted for changes to replect.
+
+In this architechture, too much traffic can not be handled thus this system is often slow and can not scale
+
