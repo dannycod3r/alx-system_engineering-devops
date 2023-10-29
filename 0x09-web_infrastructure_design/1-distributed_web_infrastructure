@@ -1,0 +1,32 @@
+Whiteboard Diagram:
+https://drive.google.com/file/d/1Vvf3a9CF6jKIg77BydeNlMiSkh7aA_z-/view?usp=sharing
+
+For every additional element, why you are adding it?
+-The second server serves as a replica of the first one in order to ensure continuous applicatrion availability.
+-The Load Balancer (HAproxy) is used to distribute incoming network traffic across multiple servers.
+
+What distribution algorithm your load balancer is configured with and how it works?
+-Round Robin algorithm distributes requests evenly to each server in a circular manner.
+
+Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both?
+-The load balancer enables an Active-Active setup.
+-Active-Active setup ensures the distribution of of incoming requests across multiple servers and all servers actively handle requests.
+-Whereas, the Active-Passive setup ensures only one server actively serves traffic as the "active" server while the others are on standby as the "passive" servers.
+
+How a database Primary-Replica (Master-Slave) cluster works?
+-The Primary(Master) database server is responsible for all data processing, read and write operations, data modification and maintenance.
+-The Replica(Slave) database server replicates data from the primary server, and serve as standby database servers.
+
+What is the difference between the Primary node and the Replica node in regard to the application?
+-The Primary node serves as the authoritative source for handling write and data modification operations, data consistency and retrieval.
+-The Replica node is used for read options to offload the primary node and improve performance without affecting the primary node's performance.
+
+Where are SPOF?
+-The Load Balancer
+
+Security issues (no firewall, no HTTPS)?
+-No firewalls designed to protect the web applications, servers and networks from unauthorized access, cyberattacks and other security threats.
+-There are also no HTTP Secure protocols at this level to secure the connection
+
+No monitoring?
+No monitoring system to ensure the tracking of the performance of both the application and database servers.
