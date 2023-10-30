@@ -1,0 +1,33 @@
+Whiteboard Diagram:
+
+https://drive.google.com/file/d/1ZV_tUDYbXPxALN46FjTnKeu7YvasqLQg/view?usp=sharing
+
+
+Specifics about the Infrastructure:
+
+Firewalls:
+Firewalls are added to control and filter incoming and outgoing traffic. They act as a security layer to protect the infrastructure from unauthorized access, malware, and other threats.
+
+HTTPS:
+Traffic is served over HTTPS to ensure data privacy and security. HTTPS encrypts data in transit, making it difficult for unauthorized parties to intercept and read sensitive information.
+
+Monitoring:
+Monitoring is used to keep track of the performance, health, and security of the infrastructure. It helps in detecting anomalies, identifying potential issues, and ensuring the system is running smoothly.
+
+Data Collection for Monitoring:
+Monitoring tools collect data through monitoring clients installed on various components of the infrastructure, such as web servers, application servers, and databases. These clients collect performance metrics, logs, and other data, which are then transmitted to the monitoring service for analysis.
+
+Monitoring Web Server QPS:
+To monitor the web server's Query Per Second (QPS), you would need to configure monitoring tools to collect and analyze traffic metrics, such as the number of incoming requests per second. By setting up alerts or dashboards, you can easily monitor and analyze the web server's QPS.
+
+Issues with the Infrastructure:
+
+Terminating SSL at the Load Balancer Level:
+Terminating SSL at the load balancer means that traffic between the load balancer and the web server is unencrypted. This could expose sensitive data to potential eavesdropping or interception in the internal network.
+
+Having Only One MySQL Server Capable of Accepting Writes:
+Having a single MySQL server that can accept writes introduces a single point of failure for write operations. If that server goes down, write requests will fail, potentially leading to data loss or service disruption.
+
+Servers with All the Same Components:
+Using servers with identical components for web servers, application servers, and databases might not be efficient for resource allocation. Different components have different resource requirements, and a one-size-fits-all approach might lead to inefficient resource utilization and performance bottlenecks. It's more common to tailor server configurations to the specific needs of each component.
+
