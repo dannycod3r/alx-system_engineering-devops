@@ -4,7 +4,6 @@
 # the private key ~/.ssh/school with the user ubuntu
 
 server="34.205.65.3"
-private_key="~/.ssh/school"
 user="ubuntu"
 
-ssh -i $private_key $user@$server
+ssh -i "$HOME/.ssh/school" "$user"@"$server"
