@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Bash script that configures apache server and 301 page
+
+# update
+apt-get update
+
+# install nginx
+apt-get install -y nginx
+
+echo "Hello World!" > tee /var/www/html/index.html
+
+replacement_str="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.ghbizdirectory.com permanent;"
+sudo sed -i "s/server_name _;/$replacement_str/" /etc/nginx/sites-enabled/default
+
+service nginx restart
