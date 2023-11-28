@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# Bash script that configures a new ubuntu machine as a web server
+
+# update package list
+sudo apt-get update
+
+# install nginx
+sudo apt-get install -y nginx 
+
+# start the service
+sudo service nginx start
+
+sudo sh -c 'echo
+     "server {
+     	     listen 80 default_server;
+	     listen [::]:80 default_server;
+
+	     server_name _;
+
+	     root /var/www/html
+	     index index.html;
+
+	     location / {
+	         return 200 \"Hello World!\";
+	     }
+      }" > /etc/nginx/sites-available/default'
+
+
+sudo service nginx reload
