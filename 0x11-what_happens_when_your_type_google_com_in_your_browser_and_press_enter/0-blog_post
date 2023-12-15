@@ -1,0 +1,55 @@
+A Journey from URL to Web Content
+
+When you type "https://www.google.com" into your browser and hit Enter,
+a complex series of events unfold behind the scenes to seamlessly deliver
+the Google homepage to your screen. In this blog post, we'll unravel
+the layers of the web stack to understand what happens at each stage of
+the journey, from DNS resolution to rendering the web page.
+
+1. DNS Request
+The journey begins with a Domain Name System (DNS) request. The browser 
+needs to convert the human-readable domain name "www.google.com" into an IP address. 
+The DNS server is queried to retrieve the IP address associated with the domain. 
+This step is crucial, in establishing the initial connection to the server hosting the requested website.
+
+2. TCP/IP
+Once the IP address is obtained, the browser initiates a Transmission Control Protocol (TCP) connection. 
+TCP ensures a reliable and ordered communication channel between the client (your browser) and 
+the server (Google's web server). This connection is part of the broader Internet Protocol (IP) suite that governs data exchange across the Internet.
+
+3. Firewall
+Before data transmission occurs, it must pass through firewalls, which are security measures designed to filter and control network traffic.
+Firewalls protect against unauthorized access and potential threats, ensuring that only legitimate data reaches its destination.
+
+4. HTTPS/SSL
+To secure the data exchanged between your browser and the web server,
+the communication is encrypted using the Hypertext Transfer Protocol Secure (HTTPS). This is achieved through the Secure Sockets Layer (SSL) or
+its successor, the Transport Layer Security (TLS) protocol. SSL/TLS encryption safeguards sensitive information from malicious actors during transit.
+
+5. Load-Balancer
+For popular websites like Google, multiple servers are often employed to handle incoming requests efficiently. 
+A load balancer sits between the user and these servers, distributing incoming traffic to ensure optimal 
+resource utilization and prevent overload on a single server.
+
+6. Web Server
+The web server's primary responsibility is to handle HTTP requests and respond 
+with the requested web page or resources. In Google's case, their web server 
+processes the request for the homepage and returns the HTML, CSS, and JavaScript files 
+are needed to render the page in your browser.
+
+7. Application Server
+For dynamic web pages, an application server comes into play.
+It executes server-side code, often written in languages like PHP, Python, or Java, generating 
+content personalized to the user or fetching data from a database. In Google's case, 
+much of their content is dynamically generated based on user preferences and search history.
+
+8. Database
+Behind the scenes, databases store and retrieve the vast amount of data that dynamic web applications rely on. 
+In Google's case, databases hold indexed web pages, user information, and other data necessary for delivering personalized search results.
+
+Conclusion
+From the initial DNS request to the rendering of the Google homepage in your browser, the journey involves a 
+multitude of components working seamlessly together. Understanding this process provides valuable insights 
+for software engineers, enabling them to optimize each step for enhanced performance, security, and user experience. 
+Next time you press Enter after typing a URL, remember the various technologies that bring the web to your fingertips.
+
